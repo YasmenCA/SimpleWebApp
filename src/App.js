@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import './Button.js';
+// src/App.js
+import React, { useState } from 'react';
+import Button from './Button';
+import './App.css'; // Import the main CSS file
+
 function App() {
+  const [count, setCount] = useState(0); // Initialize state
+
+  const handleClick = () => {
+    setCount(count + 1); // Update state
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1 className="app-title">Hover and Tap the Increment</h1>
+      <p className="app-count">Count: {count}</p>
+      <Button label="Increment" onClick={handleClick} />
     </div>
   );
 }
