@@ -1,0 +1,16 @@
+/* src/Button.css */
+.custom-button {
+    background-color: yellow; /* Button background color */
+    color: green; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  }
+  
+  .custom-button:hover {
+    background-color: green; /* Change background on hover */
+    color: yellow; /* Change text color on hover */
+  }
